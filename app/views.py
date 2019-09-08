@@ -27,6 +27,7 @@ def get_film_on_rating():
 
 @app.route('/todo/api/v1.0/genre', methods=['GET'])
 def get_genre():
+
     genres = [{'id': i.id, 'name': i.name} for i in models.Genre.query.all()]
     return jsonify({'genre': genres})
 
